@@ -2736,7 +2736,7 @@ REGISTER_OP("FakeQuantWithMinMaxArgsGradient")
     .SetShapeFn(shape_inference::UnchangedShape);
 
 REGISTER_OP("FakeQuantWithMinMaxVars")
-    .Attr("num_bits: int = 8")
+    .Attr("num_bits: int = 16")
     .Attr("narrow_range: bool = false")
     .Input("inputs: float")
     .Input("min: float")
@@ -2751,7 +2751,7 @@ REGISTER_OP("FakeQuantWithMinMaxVars")
     });
 
 REGISTER_OP("FakeQuantWithMinMaxVarsGradient")
-    .Attr("num_bits: int = 8")
+    .Attr("num_bits: int = 16")
     .Attr("narrow_range: bool = false")
     .Input("gradients: float")
     .Input("inputs: float")
@@ -2777,7 +2777,7 @@ REGISTER_OP("FakeQuantWithMinMaxVarsGradient")
     });
 
 REGISTER_OP("FakeQuantWithMinMaxVarsPerChannel")
-    .Attr("num_bits: int = 8")
+    .Attr("num_bits: int = 16")
     .Attr("narrow_range: bool = false")
     .Input("inputs: float")
     .Input("min: float")
@@ -2799,7 +2799,7 @@ REGISTER_OP("FakeQuantWithMinMaxVarsPerChannel")
     });
 
 REGISTER_OP("FakeQuantWithMinMaxVarsPerChannelGradient")
-    .Attr("num_bits: int = 8")
+    .Attr("num_bits: int = 16")
     .Attr("narrow_range: bool = false")
     .Input("gradients: float")
     .Input("inputs: float")
